@@ -52,7 +52,9 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.teal[100],
         appBar: AppBar(
+          backgroundColor: Colors.teal,
           title: const Text("GEO- SOIL APP"),
         ),
         body: getDisplaySoilData?.isEmpty == false
@@ -82,6 +84,7 @@ class _HomeViewState extends State<HomeView> {
                     SizedBox(height: MediaQuery.of(context).size.height * 0.2),
                     Center(
                       child: Card(
+                        color: Colors.teal,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -90,19 +93,22 @@ class _HomeViewState extends State<HomeView> {
                             children: [
                               Text(
                                 "Soil Moisture: ${getDisplaySoilData[0]["soil_moisture"].round().toString()}",
-                                style: const TextStyle(fontSize: 20),
+                                style: const TextStyle(fontSize: 20,
+                                color: Colors.white,),
                               ),
                               Padding(
                                 padding:
                                     const EdgeInsets.symmetric(vertical: 20),
                                 child: Text(
                                   "Soil Temperature: ${getDisplaySoilData[0]["soil_temperature"]}",
-                                  style: const TextStyle(fontSize: 20),
+                                  style: const TextStyle(fontSize: 20,
+                                color: Colors.white,),
                                 ),
                               ),
                               Text(
                                 "Scantime: ${getDisplaySoilData[0]["scantime"]}",
-                                style: const TextStyle(fontSize: 20),
+                                style: const TextStyle(fontSize: 20,
+                                color: Colors.white,),
                               ),
                             ],
                           ),

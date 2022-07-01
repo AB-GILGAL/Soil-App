@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class HttpServices {
   //// PROVIDE YOUR API KEY HERE
-  static const apiKey = "";
+  static const apiKey = "22b76c343e8f873d5e08c4842f0d566141de304f93efeff3756fb3572dae38ec";
 ////get Soil Data or latest data
   Future getSoilData() async {
     final prefs = await SharedPreferences.getInstance();

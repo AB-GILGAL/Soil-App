@@ -43,8 +43,9 @@ class _SoilGreenHouseCurrentState extends State<SoilGreenHouseCurrent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[100],
+        backgroundColor: Colors.teal[100],
         appBar: AppBar(
+          backgroundColor: Colors.teal,
           title: const Text("Soil Green House Current"),
         ),
         body: getDisplayGHCData?.isEmpty == false
@@ -116,6 +117,7 @@ class GreenHouseCurrentDataCard extends StatelessWidget {
         DateFormat(' EEE, d/M/y\n kk:mm').format(DateTime.parse(date!));
 
     return Card(
+      color: Colors.teal,
         elevation: 5,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: Container(
@@ -137,9 +139,12 @@ class GreenHouseCurrentDataCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Value:${value.toString()} "),
-                    Text("Ubits:$units"),
-                    Text("Last Updated: $dateTime"),
+                    Text("Value:  ${value.toString()} ",
+                    style: const TextStyle(color: Colors.white,)),
+                    Text("Ubits:  $units",
+                    style: const TextStyle(color: Colors.white,)),
+                    Text("Last Updated: $dateTime",
+                    style: const TextStyle(color: Colors.white,)),
                   ],
                 ),
               )
