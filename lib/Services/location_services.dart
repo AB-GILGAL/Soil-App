@@ -43,7 +43,7 @@ class LocationService {
 
 
 
-  /////////////
+  //////////
   ///
   ///
   Future<Position> _determinePosition() async {

@@ -55,7 +55,7 @@ class _HomeViewState extends State<HomeView> {
       backgroundColor: Colors.teal[100],
         appBar: AppBar(
           backgroundColor: Colors.teal,
-          title: const Text("GEO- SOIL APP"),
+          title: Center(child: const Text("GEO- SOIL APP")),
         ),
         body: getDisplaySoilData?.isEmpty == false
             ? Padding(
